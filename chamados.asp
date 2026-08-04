@@ -11,7 +11,7 @@ Response.CharSet = "UTF-8"
 ' Padrao Visual UPD8 (www.upd8.com.br)
 ' ============================================================
 
-Dim conn, cmd, rs
+Dim conn, rs
 Dim sChamadoID, sTitulo, sDescricao, sPrioridade, sStatus, sTecnico, sSolucao
 Dim sMensagem, sMsgTipo
 
@@ -38,25 +38,14 @@ If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
         sMsgTipo = "erro"
         Err.Clear
     Else
-        Set cmd = Server.CreateObject("ADODB.Command")
-        Set cmd.ActiveConnection = conn
-        cmd.CommandType = 4 ' adCmdStoredProc
-        cmd.CommandText = "sp_salvar_chamado"
-
-        ' Parametros da Stored Procedure
+        Dim sQuerySalvar
         If sChamadoID = "" Then
-            cmd.Parameters.Append cmd.CreateParameter("@ChamadoID", 3, 1, , Null) ' adInteger, adParamInput
+            sQuerySalvar = "SELECT sp_salvar_chamado(NULL, '" & Replace(sTitulo, "'", "''") & "', '" & Replace(sDescricao, "'", "''") & "', '" & Replace(sPrioridade, "'", "''") & "', '" & Replace(sStatus, "'", "''") & "', '" & Replace(sTecnico, "'", "''") & "', '" & Replace(sSolucao, "'", "''") & "')"
         Else
-            cmd.Parameters.Append cmd.CreateParameter("@ChamadoID", 3, 1, , CLng(sChamadoID))
+            sQuerySalvar = "SELECT sp_salvar_chamado(" & CLng(sChamadoID) & ", '" & Replace(sTitulo, "'", "''") & "', '" & Replace(sDescricao, "'", "''") & "', '" & Replace(sPrioridade, "'", "''") & "', '" & Replace(sStatus, "'", "''") & "', '" & Replace(sTecnico, "'", "''") & "', '" & Replace(sSolucao, "'", "''") & "')"
         End If
-        cmd.Parameters.Append cmd.CreateParameter("@Titulo", 200, 1, 200, sTitulo)         ' adVarChar
-        cmd.Parameters.Append cmd.CreateParameter("@Descricao", 200, 1, 4000, sDescricao)  ' adVarChar
-        cmd.Parameters.Append cmd.CreateParameter("@Prioridade", 200, 1, 50, sPrioridade)
-        cmd.Parameters.Append cmd.CreateParameter("@Status", 200, 1, 50, sStatus)
-        cmd.Parameters.Append cmd.CreateParameter("@TecnicoResp", 200, 1, 200, sTecnico)
-        cmd.Parameters.Append cmd.CreateParameter("@SolucaoTecnica", 200, 1, 4000, sSolucao)
 
-        cmd.Execute
+        conn.Execute sQuerySalvar
 
         If Err.Number <> 0 Then
             sMensagem = "Erro ao salvar chamado: " & Err.Description
@@ -64,7 +53,6 @@ If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
             Err.Clear
         Else
             ' Redirecionar para pesquisa apos salvar com sucesso
-            Set cmd = Nothing
             conn.Close
             Set conn = Nothing
             Response.Redirect "pesquisa_chamados.asp?msg=salvo"
@@ -86,15 +74,15 @@ If Request.QueryString("id") <> "" And sMensagem = "" Then
     conn.Open DB_CONNECTION_STRING
 
     If Err.Number = 0 Then
-        Set rs = conn.Execute("SELECT ChamadoID, Titulo, Descricao, Prioridade, Status, TecnicoResp, SolucaoTecnica FROM Chamados WHERE ChamadoID = " & CLng(Request.QueryString("id")))
+        Set rs = conn.Execute("SELECT chamadoid, titulo, descricao, prioridade, status, tecnicoresp, solucaotecnica FROM chamados WHERE chamadoid = " & CLng(Request.QueryString("id")))
         If Not rs.EOF Then
-            sChamadoID  = rs("ChamadoID")
-            sTitulo     = rs("Titulo") & ""
-            sDescricao  = rs("Descricao") & ""
-            sPrioridade = rs("Prioridade") & ""
-            sStatus     = rs("Status") & ""
-            sTecnico    = rs("TecnicoResp") & ""
-            sSolucao    = rs("SolucaoTecnica") & ""
+            sChamadoID  = rs("chamadoid")
+            sTitulo     = rs("titulo") & ""
+            sDescricao  = rs("descricao") & ""
+            sPrioridade = rs("prioridade") & ""
+            sStatus     = rs("status") & ""
+            sTecnico    = rs("tecnicoresp") & ""
+            sSolucao    = rs("solucaotecnica") & ""
         End If
         rs.Close
         Set rs = Nothing

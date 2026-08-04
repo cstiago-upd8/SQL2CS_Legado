@@ -32,17 +32,17 @@ Else
 End If
 
 ' --- Montar consulta ---
-sSQL = "SELECT ChamadoID, Titulo, Prioridade, Status, TecnicoResp, DataCriacao FROM [dbo].[Chamados] WHERE 1=1"
+sSQL = "SELECT chamadoid, titulo, prioridade, status, tecnicoresp, datacriacao FROM chamados WHERE 1=1"
 
 If sBusca <> "" Then
-    sSQL = sSQL & " AND (Titulo LIKE '%" & Replace(sBusca, "'", "''") & "%' OR TecnicoResp LIKE '%" & Replace(sBusca, "'", "''") & "%')"
+    sSQL = sSQL & " AND (titulo ILIKE '%" & Replace(sBusca, "'", "''") & "%' OR tecnicoresp ILIKE '%" & Replace(sBusca, "'", "''") & "%')"
 End If
 
 If sStatusFiltro <> "" And sStatusFiltro <> "Todos" Then
-    sSQL = sSQL & " AND Status = '" & Replace(sStatusFiltro, "'", "''") & "'"
+    sSQL = sSQL & " AND status = '" & Replace(sStatusFiltro, "'", "''") & "'"
 End If
 
-sSQL = sSQL & " ORDER BY DataCriacao DESC"
+sSQL = sSQL & " ORDER BY datacriacao DESC"
 
 ' --- Conectar e executar ---
 On Error Resume Next
@@ -551,7 +551,7 @@ On Error GoTo 0
 
                     Do While Not rs.EOF
                         ' Classe CSS para prioridade
-                        Select Case LCase(rs("Prioridade") & "")
+                        Select Case LCase(rs("prioridade") & "")
                             Case "baixa"   : sPrioridadeClass = "badge-baixa"
                             Case "media"   : sPrioridadeClass = "badge-media"
                             Case "alta"    : sPrioridadeClass = "badge-alta"
@@ -560,7 +560,7 @@ On Error GoTo 0
                         End Select
 
                         ' Classe CSS para status
-                        Select Case LCase(rs("Status") & "")
+                        Select Case LCase(rs("status") & "")
                             Case "aberto"        : sStatusClass = "badge-aberto"
                             Case "em andamento"  : sStatusClass = "badge-em-andamento"
                             Case "aguardando"    : sStatusClass = "badge-aguardando"
@@ -570,22 +570,22 @@ On Error GoTo 0
                         End Select
 
                         ' Formatar data
-                        If Not IsNull(rs("DataCriacao")) Then
-                            sDataFormatada = Day(rs("DataCriacao")) & "/" & Right("0" & Month(rs("DataCriacao")), 2) & "/" & Year(rs("DataCriacao")) & " " & Right("0" & Hour(rs("DataCriacao")), 2) & ":" & Right("0" & Minute(rs("DataCriacao")), 2)
+                        If Not IsNull(rs("datacriacao")) Then
+                            sDataFormatada = Day(rs("datacriacao")) & "/" & Right("0" & Month(rs("datacriacao")), 2) & "/" & Year(rs("datacriacao")) & " " & Right("0" & Hour(rs("datacriacao")), 2) & ":" & Right("0" & Minute(rs("datacriacao")), 2)
                         Else
                             sDataFormatada = "-"
                         End If
                     %>
                         <tr>
-                            <td><strong>#<%= rs("ChamadoID") %></strong></td>
-                            <td><%= Server.HTMLEncode(rs("Titulo") & "") %></td>
-                            <td><span class="badge <%= sPrioridadeClass %>"><%= Server.HTMLEncode(rs("Prioridade") & "") %></span></td>
-                            <td><span class="badge <%= sStatusClass %>"><%= Server.HTMLEncode(rs("Status") & "") %></span></td>
-                            <td><%= Server.HTMLEncode(rs("TecnicoResp") & "") %></td>
+                            <td><strong>#<%= rs("chamadoid") %></strong></td>
+                            <td><%= Server.HTMLEncode(rs("titulo") & "") %></td>
+                            <td><span class="badge <%= sPrioridadeClass %>"><%= Server.HTMLEncode(rs("prioridade") & "") %></span></td>
+                            <td><span class="badge <%= sStatusClass %>"><%= Server.HTMLEncode(rs("status") & "") %></span></td>
+                            <td><%= Server.HTMLEncode(rs("tecnicoresp") & "") %></td>
                             <td><%= sDataFormatada %></td>
                             <td>
-                                <a href="chamados.asp?id=<%= rs("ChamadoID") %>" class="btn btn-primary btn-sm">Editar</a>
-                                <a href="excluir_chamado.asp?id=<%= rs("ChamadoID") %>" class="btn btn-danger btn-sm" onclick="return confirm('Deseja realmente excluir o chamado #<%= rs("ChamadoID") %>?');">Excluir</a>
+                                <a href="chamados.asp?id=<%= rs("chamadoid") %>" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="excluir_chamado.asp?id=<%= rs("chamadoid") %>" class="btn btn-danger btn-sm" onclick="return confirm('Deseja realmente excluir o chamado #<%= rs("chamadoid") %>?');">Excluir</a>
                             </td>
                         </tr>
                     <%
