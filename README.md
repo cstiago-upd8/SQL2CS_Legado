@@ -1,4 +1,4 @@
-# SQL2CS - Sistema de Gerenciamento de Chamados/OS
+# SQL2CS_Legado - Sistema de Gerenciamento de Chamados/OS
 
 Sistema web para gerenciamento de Chamados e Ordens de Serviço desenvolvido em **ASP Clássico (VBScript)** com banco de dados **PostgreSQL** na AWS.
 
@@ -121,7 +121,7 @@ New-WebAppPool -Name "PoolChamados"
 Set-ItemProperty "IIS:\AppPools\PoolChamados" -Name "enable32BitAppOnWin64" -Value $false
 Set-ItemProperty "IIS:\AppPools\PoolChamados" -Name "managedRuntimeVersion" -Value ""
 
-New-Website -Name "Chamados" -Port 8080 -PhysicalPath "C:\Projetos\SQL2CS" -ApplicationPool "PoolChamados"
+New-Website -Name "Chamados" -Port 8080 -PhysicalPath "C:\Projetos\SQL2CS_Legado" -ApplicationPool "PoolChamados"
 
 # Desbloquear seção ASP
 Set-WebConfiguration -Filter "/system.webServer/asp" -PSPath "MACHINE/WEBROOT/APPHOST" -Metadata "overrideMode" -Value "Allow"
@@ -196,7 +196,7 @@ Padrão UPD8 com:
 
 ## Repositório
 
-- **GitHub**: [https://github.com/upd8-Inovacao/SQL2CS](https://github.com/upd8-Inovacao/SQL2CS)
+- **GitHub**: [https://github.com/upd8-Inovacao/SQL2CS_Legado](https://github.com/upd8-Inovacao/SQL2CS_Legado)
 - **Branch principal**: `main`
 
 ---
