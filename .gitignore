@@ -1,0 +1,10 @@
+# Arquivo de configuracao com credenciais
+config.asp
+
+# Thumbs e arquivos de sistema Windows
+Thumbs.db
+Desktop.ini
+*.tmp
+
+# VS Code
+.vscode/
