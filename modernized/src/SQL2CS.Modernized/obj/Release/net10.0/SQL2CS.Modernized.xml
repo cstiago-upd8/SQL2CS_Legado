@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SQL2CS.Modernized</name>
+    </assembly>
+    <members>
+        <member name="T:SQL2CS.Modernized.Controllers.ChamadosController">
+             <summary>
+             REST endpoints for the Chamado resource.
+             </summary>
+             <remarks>
+             Replaces the following legacy ASP pages:
+             <list type="bullet">
+               <item><description>chamados.asp (crud_form)</description></item>
+               <item><description>excluir_chamado.asp (action_handler)</description></item>
+               <item><description>pesquisa_chamados.asp (list_search)</description></item>
+             </list>
+            
+             The legacy pages opened an <c>ADODB.Connection</c> directly and built SQL by
+             string concatenation. Data access now goes through
+             <c>IChamadoService</c>, which uses parameterised EF Core queries.
+             </remarks>
+        </member>
+        <member name="M:SQL2CS.Modernized.Controllers.ChamadosController.Listar(System.String,System.String)">
+            <summary>Lists Chamado records, optionally filtered.</summary>
+            <remarks>Replaces pesquisa_chamados.asp.</remarks>
+        </member>
+        <member name="M:SQL2CS.Modernized.Controllers.ChamadosController.Obter(System.Int32)">
+            <summary>Fetches a single Chamado by its key.</summary>
+            <remarks>Replaces chamados.asp.</remarks>
+        </member>
+        <member name="M:SQL2CS.Modernized.Controllers.ChamadosController.Salvar(SQL2CS.Modernized.DTOs.ChamadoRequest)">
+            <summary>Creates or updates a Chamado.</summary>
+            <remarks>Replaces chamados.asp.</remarks>
+        </member>
+        <member name="M:SQL2CS.Modernized.Controllers.ChamadosController.Excluir(System.Int32)">
+            <summary>Deletes a Chamado and its history.</summary>
+            <remarks>Replaces excluir_chamado.asp.</remarks>
+        </member>
+        <member name="T:SQL2CS.Modernized.Data.AppDbContext">
+            <summary>
+            EF Core context for the converted schema.
+            </summary>
+            <remarks>
+            Replaces the <c>ADODB.Connection</c> the legacy pages opened directly. The
+            PostgreSQL schema is unchanged; only the access path is modernised.
+            </remarks>
+        </member>
+        <member name="P:SQL2CS.Modernized.Data.AppDbContext.Chamados">
+            <summary>Rows of <c>chamados</c>.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Data.AppDbContext.HistoricoChamados">
+            <summary>Rows of <c>historicochamados</c>.</summary>
+        </member>
+        <member name="T:SQL2CS.Modernized.Data.Configurations.ChamadoConfiguration">
+            <summary>
+            Fluent configuration for <see cref="T:SQL2CS.Modernized.Models.Chamado"/>.
+            </summary>
+            <remarks>
+            Mirrors the constraints declared in the legacy DDL: column types, nullability,
+            defaults, and the foreign keys.
+            </remarks>
+        </member>
+        <member name="T:SQL2CS.Modernized.Data.Configurations.HistoricoChamadoConfiguration">
+            <summary>
+            Fluent configuration for <see cref="T:SQL2CS.Modernized.Models.HistoricoChamado"/>.
+            </summary>
+            <remarks>
+            Mirrors the constraints declared in the legacy DDL: column types, nullability,
+            defaults, and the foreign keys.
+            </remarks>
+        </member>
+        <member name="T:SQL2CS.Modernized.DTOs.ChamadoListItem">
+            <summary>
+            Row projection used by the Chamado listing.
+            </summary>
+            <remarks>Derived from chamados.asp, excluir_chamado.asp, pesquisa_chamados.asp, sp_excluir_chamado, sp_salvar_chamado.</remarks>
+        </member>
+        <member name="T:SQL2CS.Modernized.DTOs.ChamadoRequest">
+            <summary>
+            Request payload for creating or updating a Chamado.
+            </summary>
+            <remarks>Derived from chamados.asp, excluir_chamado.asp, pesquisa_chamados.asp, sp_excluir_chamado, sp_salvar_chamado.</remarks>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoRequest.ChamadoId">
+            <summary>Maps to chamados.chamadoid. Leave null to insert.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoRequest.Titulo">
+            <summary>Maps to chamados.titulo.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoRequest.Descricao">
+            <summary>Maps to chamados.descricao.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoRequest.Prioridade">
+            <summary>Maps to chamados.prioridade.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoRequest.Status">
+            <summary>Maps to chamados.status.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoRequest.TecnicoResp">
+            <summary>Maps to chamados.tecnicoresp.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoRequest.SolucaoTecnica">
+            <summary>Maps to chamados.solucaotecnica.</summary>
+        </member>
+        <member name="T:SQL2CS.Modernized.DTOs.ChamadoResponse">
+            <summary>
+            Full representation of a Chamado.
+            </summary>
+            <remarks>Derived from chamados.asp, excluir_chamado.asp, pesquisa_chamados.asp, sp_excluir_chamado, sp_salvar_chamado.</remarks>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.ChamadoId">
+            <summary>Maps to chamados.chamadoid.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.Titulo">
+            <summary>Maps to chamados.titulo.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.Descricao">
+            <summary>Maps to chamados.descricao.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.Prioridade">
+            <summary>Maps to chamados.prioridade.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.Status">
+            <summary>Maps to chamados.status.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.TecnicoResp">
+            <summary>Maps to chamados.tecnicoresp.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.SolucaoTecnica">
+            <summary>Maps to chamados.solucaotecnica.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.DataCriacao">
+            <summary>Maps to chamados.datacriacao.</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.DTOs.ChamadoResponse.DataAtualizacao">
+            <summary>Maps to chamados.dataatualizacao.</summary>
+        </member>
+        <member name="T:SQL2CS.Modernized.Exceptions.DomainException">
+             <summary>
+             Raised when a business rule rejects an operation.
+             </summary>
+             <remarks>
+             The legacy PL/pgSQL routines enforced their rules with
+             <c>RAISE EXCEPTION</c>, which surfaced to the ASP page as an ADO error and was
+             rendered in a banner. This exception carries the same messages, and the
+             controllers translate it into a 400 response so the Angular form can display
+             it.
+            
+             Rules preserved from the legacy schema:
+             <list type="bullet">
+               <item><description>Chamado nao encontrado.</description></item>
+               <item><description>A solucao tecnica deve ser preenchida para resolver ou fechar o chamado.</description></item>
+             </list>
+             </remarks>
+        </member>
+        <member name="T:SQL2CS.Modernized.Models.Chamado">
+            <summary>
+            Maps the <c>chamados</c> table.
+            </summary>
+            <remarks>Generated from database_chamados_postgres.sql.</remarks>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.ChamadoId">
+            <summary>Maps <c>chamados.chamadoid</c> (SERIAL).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.Titulo">
+            <summary>Maps <c>chamados.titulo</c> (VARCHAR(200)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.Descricao">
+            <summary>Maps <c>chamados.descricao</c> (VARCHAR(4000)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.Prioridade">
+            <summary>Maps <c>chamados.prioridade</c> (VARCHAR(50)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.Status">
+            <summary>Maps <c>chamados.status</c> (VARCHAR(50)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.TecnicoResp">
+            <summary>Maps <c>chamados.tecnicoresp</c> (VARCHAR(200)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.SolucaoTecnica">
+            <summary>Maps <c>chamados.solucaotecnica</c> (VARCHAR(4000)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.DataCriacao">
+            <summary>Maps <c>chamados.datacriacao</c> (TIMESTAMP).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.DataAtualizacao">
+            <summary>Maps <c>chamados.dataatualizacao</c> (TIMESTAMP).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.Chamado.HistoricoChamados">
+            <summary>HistoricoChamado rows that reference this one.</summary>
+        </member>
+        <member name="T:SQL2CS.Modernized.Models.HistoricoChamado">
+            <summary>
+            Maps the <c>historicochamados</c> table.
+            </summary>
+            <remarks>Generated from database_chamados_postgres.sql.</remarks>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.HistoricoChamado.HistoricoId">
+            <summary>Maps <c>historicochamados.historicoid</c> (SERIAL).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.HistoricoChamado.ChamadoId">
+            <summary>Maps <c>historicochamados.chamadoid</c> (INT).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.HistoricoChamado.Status">
+            <summary>Maps <c>historicochamados.status</c> (VARCHAR(50)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.HistoricoChamado.TecnicoResp">
+            <summary>Maps <c>historicochamados.tecnicoresp</c> (VARCHAR(200)).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.HistoricoChamado.DataRegistro">
+            <summary>Maps <c>historicochamados.dataregistro</c> (TIMESTAMP).</summary>
+        </member>
+        <member name="P:SQL2CS.Modernized.Models.HistoricoChamado.Chamado">
+            <summary>The Chamado this row belongs to.</summary>
+        </member>
+        <member name="T:SQL2CS.Modernized.Services.ChamadoService">
+             <summary>
+             Implements <see cref="T:SQL2CS.Modernized.Services.Interfaces.IChamadoService"/> over EF Core.
+             </summary>
+             <remarks>
+             Converted from the legacy PL/pgSQL routines. Every business rule the routines
+             enforced with <c>RAISE EXCEPTION</c> is preserved as a
+             <see cref="T:SQL2CS.Modernized.Exceptions.DomainException"/>.
+            
+             Legacy sources:
+             <list type="bullet">
+               <item><description>chamados.asp</description></item>
+               <item><description>excluir_chamado.asp</description></item>
+               <item><description>pesquisa_chamados.asp</description></item>
+               <item><description>sp_excluir_chamado</description></item>
+               <item><description>sp_salvar_chamado</description></item>
+             </list>
+             </remarks>
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.ChamadoService.ExcluirAsync(System.Int32)">
+            <inheritdoc />
+            <remarks>
+            Business rules enforced here:
+            <list type="bullet">
+              <item><description>Chamado nao encontrado.</description></item>
+            </list>
+            </remarks>
+            <exception cref="T:SQL2CS.Modernized.Exceptions.DomainException">Raised when a business rule rejects the operation.</exception>
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.ChamadoService.ListarAsync(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.ChamadoService.ObterAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.ChamadoService.SalvarAsync(SQL2CS.Modernized.DTOs.ChamadoRequest)">
+            <inheritdoc />
+            <remarks>
+            Business rules enforced here:
+            <list type="bullet">
+              <item><description>A solucao tecnica deve ser preenchida para resolver ou fechar o chamado.</description></item>
+            </list>
+            </remarks>
+            <exception cref="T:SQL2CS.Modernized.Exceptions.DomainException">Raised when a business rule rejects the operation.</exception>
+        </member>
+        <member name="T:SQL2CS.Modernized.Services.Interfaces.IChamadoService">
+             <summary>
+             Service contract for the Chamado resource.
+             </summary>
+             <remarks>
+             Generated from the legacy PL/pgSQL routines and the inline queries of the
+             converted ASP pages. The implementation lives in <c>ChamadoService</c>.
+            
+             Legacy sources:
+             <list type="bullet">
+               <item><description>chamados.asp</description></item>
+               <item><description>excluir_chamado.asp</description></item>
+               <item><description>pesquisa_chamados.asp</description></item>
+               <item><description>sp_excluir_chamado</description></item>
+               <item><description>sp_salvar_chamado</description></item>
+             </list>
+             </remarks>
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.Interfaces.IChamadoService.ExcluirAsync(System.Int32)">
+            <summary>Converted from sp_excluir_chamado.</summary>
+            <remarks>
+            Business rules preserved from the legacy routine:
+            <list type="bullet">
+              <item><description>Chamado nao encontrado.</description></item>
+            </list>
+            </remarks>
+            <param name="chamadoId">Maps to <c>p_chamadoid</c>.</param>
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.Interfaces.IChamadoService.ListarAsync(System.String,System.String)">
+            <summary>Replaces the inline filtered SELECT on the listing page.</summary>
+            <param name="busca">The busca value.</param>
+            <param name="status">The status value.</param>
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.Interfaces.IChamadoService.ObterAsync(System.Int32)">
+            <summary>Replaces the inline SELECT by primary key on the form page.</summary>
+            <param name="id">The id value.</param>
+        </member>
+        <member name="M:SQL2CS.Modernized.Services.Interfaces.IChamadoService.SalvarAsync(SQL2CS.Modernized.DTOs.ChamadoRequest)">
+            <summary>Converted from sp_salvar_chamado.</summary>
+            <remarks>
+            Business rules preserved from the legacy routine:
+            <list type="bullet">
+              <item><description>A solucao tecnica deve ser preenchida para resolver ou fechar o chamado.</description></item>
+            </list>
+            </remarks>
+            <param name="request">The request value.</param>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>
