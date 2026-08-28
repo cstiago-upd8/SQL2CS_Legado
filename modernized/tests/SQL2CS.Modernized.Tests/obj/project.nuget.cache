@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6WTkScd0Ew0=",
+  "dgSpecHash": "na8uYn6FQ6A=",
   "success": true,
-  "projectFilePath": "/tmp/sql2cs-bhbzqkte/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj",
+  "projectFilePath": "/tmp/sql2cs-cegeycmh/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj",
   "expectedPackageFiles": [
     "/home/bedrock_agentcore/.nuget/packages/coverlet.collector/6.0.2/coverlet.collector.6.0.2.nupkg.sha512",
     "/home/bedrock_agentcore/.nuget/packages/microsoft.codecoverage/17.11.1/microsoft.codecoverage.17.11.1.nupkg.sha512",

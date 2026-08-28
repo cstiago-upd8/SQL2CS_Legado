@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/tmp/sql2cs-bhbzqkte/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj": {}
+    "/tmp/sql2cs-cegeycmh/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj": {}
   },
   "projects": {
-    "/tmp/sql2cs-bhbzqkte/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj": {
+    "/tmp/sql2cs-cegeycmh/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/tmp/sql2cs-bhbzqkte/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj",
+        "projectUniqueName": "/tmp/sql2cs-cegeycmh/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj",
         "projectName": "SQL2CS.Modernized",
-        "projectPath": "/tmp/sql2cs-bhbzqkte/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj",
+        "projectPath": "/tmp/sql2cs-cegeycmh/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj",
         "packagesPath": "/home/bedrock_agentcore/.nuget/packages/",
-        "outputPath": "/tmp/sql2cs-bhbzqkte/generated/solution/src/SQL2CS.Modernized/obj/",
+        "outputPath": "/tmp/sql2cs-cegeycmh/generated/solution/src/SQL2CS.Modernized/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/bedrock_agentcore/.nuget/NuGet/NuGet.Config"
@@ -496,14 +496,14 @@
         }
       }
     },
-    "/tmp/sql2cs-bhbzqkte/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj": {
+    "/tmp/sql2cs-cegeycmh/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/tmp/sql2cs-bhbzqkte/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj",
+        "projectUniqueName": "/tmp/sql2cs-cegeycmh/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj",
         "projectName": "SQL2CS.Modernized.Tests",
-        "projectPath": "/tmp/sql2cs-bhbzqkte/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj",
+        "projectPath": "/tmp/sql2cs-cegeycmh/generated/solution/tests/SQL2CS.Modernized.Tests/SQL2CS.Modernized.Tests.csproj",
         "packagesPath": "/home/bedrock_agentcore/.nuget/packages/",
-        "outputPath": "/tmp/sql2cs-bhbzqkte/generated/solution/tests/SQL2CS.Modernized.Tests/obj/",
+        "outputPath": "/tmp/sql2cs-cegeycmh/generated/solution/tests/SQL2CS.Modernized.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/bedrock_agentcore/.nuget/NuGet/NuGet.Config"
@@ -519,8 +519,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/tmp/sql2cs-bhbzqkte/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj": {
-                "projectPath": "/tmp/sql2cs-bhbzqkte/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj"
+              "/tmp/sql2cs-cegeycmh/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj": {
+                "projectPath": "/tmp/sql2cs-cegeycmh/generated/solution/src/SQL2CS.Modernized/SQL2CS.Modernized.csproj"
               }
             }
           }
