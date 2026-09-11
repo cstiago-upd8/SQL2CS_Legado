@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f8238b05-cd55-4e08-bc4c-d56f886d0b51" name="@localhost 2026-09-11 11:58:36" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-11T11:58:36.9211943+00:00" queuing="2026-09-11T11:58:36.9211943+00:00" start="2026-09-11T11:58:33.4732497+00:00" finish="2026-09-11T11:58:37.2259714+00:00" />
+  <TestSettings name="default" id="8ea0ce0e-1c5a-4a98-8364-dd06dd054d6b">
+    <Deployment runDeploymentRoot="_localhost_2026-09-11_11_58_36" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="a8fbff7d-f8c5-4b77-91ed-6267e4fe7623" testId="071ab261-3bf0-61f9-cb3d-1147567a1d21" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithExistingKey_UpdatesInPlace" computerName="localhost" duration="00:00:00.0353958" startTime="2026-09-11T11:58:36.8082973+00:00" endTime="2026-09-11T11:58:36.8082974+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8fbff7d-f8c5-4b77-91ed-6267e4fe7623" />
+    <UnitTestResult executionId="6ba1511d-3d86-4a30-bd4d-bd62a142b25d" testId="43223f93-3719-c331-dbbc-16c51dc223b1" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ListarAsync_FiltersByStatus" computerName="localhost" duration="00:00:00.0241930" startTime="2026-09-11T11:58:36.8325757+00:00" endTime="2026-09-11T11:58:36.8325758+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ba1511d-3d86-4a30-bd4d-bd62a142b25d" />
+    <UnitTestResult executionId="a285e528-57d8-46b0-9238-e5dd7dc3effd" testId="03fe17fa-2417-0ff2-6cb8-b3315c166ece" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithFechadoStatusAndNoSolution_Throws" computerName="localhost" duration="00:00:00.0357268" startTime="2026-09-11T11:58:36.5777333+00:00" endTime="2026-09-11T11:58:36.5777334+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a285e528-57d8-46b0-9238-e5dd7dc3effd" />
+    <UnitTestResult executionId="8192e565-0282-4a07-ba67-f290bc878bb5" testId="b4fae5a0-f922-39ff-c54c-72b4531ab22a" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_AlwaysWritesAnAuditRow" computerName="localhost" duration="00:00:00.0059311" startTime="2026-09-11T11:58:36.8658081+00:00" endTime="2026-09-11T11:58:36.8658082+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8192e565-0282-4a07-ba67-f290bc878bb5" />
+    <UnitTestResult executionId="7000d381-afaa-4c3b-953c-51dc7b04399f" testId="c8ad0976-6632-7785-2f9a-e817fee03e14" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithResolvidoStatusAndNoSolution_Throws" computerName="localhost" duration="00:00:00.6060848" startTime="2026-09-11T11:58:36.5324537+00:00" endTime="2026-09-11T11:58:36.5324679+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7000d381-afaa-4c3b-953c-51dc7b04399f" />
+    <UnitTestResult executionId="022f8318-149b-408a-b02a-8592710a30e2" testId="6a6a8be8-8bd0-8810-37b4-c9a1af16ac37" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ListarAsync_WithoutFilters_ReturnsEveryRow" computerName="localhost" duration="00:00:00.0061535" startTime="2026-09-11T11:58:36.8977091+00:00" endTime="2026-09-11T11:58:36.8977092+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="022f8318-149b-408a-b02a-8592710a30e2" />
+    <UnitTestResult executionId="81c793c2-8d3f-448e-97ac-39d4d38da1e6" testId="29ac3687-95c4-ce3b-d5a5-43dd111dc5f7" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ObterAsync_WithAKnownKey_ReturnsTheRow" computerName="localhost" duration="00:00:00.1937435" startTime="2026-09-11T11:58:36.7727788+00:00" endTime="2026-09-11T11:58:36.7727789+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81c793c2-8d3f-448e-97ac-39d4d38da1e6" />
+    <UnitTestResult executionId="27328fa1-2909-4bf6-b76b-4ce836a5efdc" testId="162e4b7c-989d-f651-0d7a-44f37ff908e2" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ObterAsync_WithAnUnknownKey_ReturnsNull" computerName="localhost" duration="00:00:00.0011794" startTime="2026-09-11T11:58:36.8597794+00:00" endTime="2026-09-11T11:58:36.8597794+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="27328fa1-2909-4bf6-b76b-4ce836a5efdc" />
+    <UnitTestResult executionId="72ddef0f-331b-4715-a404-7ec3fcdefdd2" testId="34beabc3-c316-05bb-008c-ebd0f5569bf9" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ExcluirAsync_WithUnknownKey_Throws" computerName="localhost" duration="00:00:00.0010305" startTime="2026-09-11T11:58:36.8968178+00:00" endTime="2026-09-11T11:58:36.8968179+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72ddef0f-331b-4715-a404-7ec3fcdefdd2" />
+    <UnitTestResult executionId="962d699e-2586-4035-8328-947613c7b040" testId="ca890fb1-8e13-8d50-3144-e55c458a37d0" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithNullKey_InsertsANewRow" computerName="localhost" duration="00:00:00.0012994" startTime="2026-09-11T11:58:36.8973245+00:00" endTime="2026-09-11T11:58:36.8973246+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="962d699e-2586-4035-8328-947613c7b040" />
+    <UnitTestResult executionId="eb017341-10b1-4ffa-bd61-1cd32b5d8dce" testId="96aa3e06-5246-e3e4-76e9-2ac280db708d" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithResolvidoStatusAndASolution_Succeeds" computerName="localhost" duration="00:00:00.0012860" startTime="2026-09-11T11:58:36.8671750+00:00" endTime="2026-09-11T11:58:36.8671751+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb017341-10b1-4ffa-bd61-1cd32b5d8dce" />
+    <UnitTestResult executionId="21ec3fa1-4447-47da-8af1-f36cf9538f54" testId="a5755dc5-f9a3-c101-e98a-c4e811bdedd8" testName="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ExcluirAsync_RemovesTheRowAndItsHistory" computerName="localhost" duration="00:00:00.0257986" startTime="2026-09-11T11:58:36.8585095+00:00" endTime="2026-09-11T11:58:36.8585096+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21ec3fa1-4447-47da-8af1-f36cf9538f54" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ObterAsync_WithAKnownKey_ReturnsTheRow" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="29ac3687-95c4-ce3b-d5a5-43dd111dc5f7">
+      <Execution id="81c793c2-8d3f-448e-97ac-39d4d38da1e6" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="ObterAsync_WithAKnownKey_ReturnsTheRow" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ObterAsync_WithAnUnknownKey_ReturnsNull" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="162e4b7c-989d-f651-0d7a-44f37ff908e2">
+      <Execution id="27328fa1-2909-4bf6-b76b-4ce836a5efdc" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="ObterAsync_WithAnUnknownKey_ReturnsNull" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ListarAsync_WithoutFilters_ReturnsEveryRow" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="6a6a8be8-8bd0-8810-37b4-c9a1af16ac37">
+      <Execution id="022f8318-149b-408a-b02a-8592710a30e2" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="ListarAsync_WithoutFilters_ReturnsEveryRow" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ExcluirAsync_WithUnknownKey_Throws" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="34beabc3-c316-05bb-008c-ebd0f5569bf9">
+      <Execution id="72ddef0f-331b-4715-a404-7ec3fcdefdd2" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="ExcluirAsync_WithUnknownKey_Throws" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_AlwaysWritesAnAuditRow" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="b4fae5a0-f922-39ff-c54c-72b4531ab22a">
+      <Execution id="8192e565-0282-4a07-ba67-f290bc878bb5" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="SalvarAsync_AlwaysWritesAnAuditRow" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ExcluirAsync_RemovesTheRowAndItsHistory" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="a5755dc5-f9a3-c101-e98a-c4e811bdedd8">
+      <Execution id="21ec3fa1-4447-47da-8af1-f36cf9538f54" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="ExcluirAsync_RemovesTheRowAndItsHistory" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.ListarAsync_FiltersByStatus" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="43223f93-3719-c331-dbbc-16c51dc223b1">
+      <Execution id="6ba1511d-3d86-4a30-bd4d-bd62a142b25d" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="ListarAsync_FiltersByStatus" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithExistingKey_UpdatesInPlace" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="071ab261-3bf0-61f9-cb3d-1147567a1d21">
+      <Execution id="a8fbff7d-f8c5-4b77-91ed-6267e4fe7623" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="SalvarAsync_WithExistingKey_UpdatesInPlace" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithFechadoStatusAndNoSolution_Throws" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="03fe17fa-2417-0ff2-6cb8-b3315c166ece">
+      <Execution id="a285e528-57d8-46b0-9238-e5dd7dc3effd" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="SalvarAsync_WithFechadoStatusAndNoSolution_Throws" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithResolvidoStatusAndASolution_Succeeds" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="96aa3e06-5246-e3e4-76e9-2ac280db708d">
+      <Execution id="eb017341-10b1-4ffa-bd61-1cd32b5d8dce" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="SalvarAsync_WithResolvidoStatusAndASolution_Succeeds" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithNullKey_InsertsANewRow" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="ca890fb1-8e13-8d50-3144-e55c458a37d0">
+      <Execution id="962d699e-2586-4035-8328-947613c7b040" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="SalvarAsync_WithNullKey_InsertsANewRow" />
+    </UnitTest>
+    <UnitTest name="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests.SalvarAsync_WithResolvidoStatusAndNoSolution_Throws" storage="/tmp/sql2cs-4jc85n2z/generated/solution/tests/sql2cs.modernized.tests/bin/release/net10.0/sql2cs.modernized.tests.dll" id="c8ad0976-6632-7785-2f9a-e817fee03e14">
+      <Execution id="7000d381-afaa-4c3b-953c-51dc7b04399f" />
+      <TestMethod codeBase="/tmp/sql2cs-4jc85n2z/generated/solution/tests/SQL2CS.Modernized.Tests/bin/Release/net10.0/SQL2CS.Modernized.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SQL2CS.Modernized.Tests.Services.ChamadoServiceTests" name="SalvarAsync_WithResolvidoStatusAndNoSolution_Throws" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="071ab261-3bf0-61f9-cb3d-1147567a1d21" executionId="a8fbff7d-f8c5-4b77-91ed-6267e4fe7623" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43223f93-3719-c331-dbbc-16c51dc223b1" executionId="6ba1511d-3d86-4a30-bd4d-bd62a142b25d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03fe17fa-2417-0ff2-6cb8-b3315c166ece" executionId="a285e528-57d8-46b0-9238-e5dd7dc3effd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4fae5a0-f922-39ff-c54c-72b4531ab22a" executionId="8192e565-0282-4a07-ba67-f290bc878bb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8ad0976-6632-7785-2f9a-e817fee03e14" executionId="7000d381-afaa-4c3b-953c-51dc7b04399f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a6a8be8-8bd0-8810-37b4-c9a1af16ac37" executionId="022f8318-149b-408a-b02a-8592710a30e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="29ac3687-95c4-ce3b-d5a5-43dd111dc5f7" executionId="81c793c2-8d3f-448e-97ac-39d4d38da1e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="162e4b7c-989d-f651-0d7a-44f37ff908e2" executionId="27328fa1-2909-4bf6-b76b-4ce836a5efdc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34beabc3-c316-05bb-008c-ebd0f5569bf9" executionId="72ddef0f-331b-4715-a404-7ec3fcdefdd2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca890fb1-8e13-8d50-3144-e55c458a37d0" executionId="962d699e-2586-4035-8328-947613c7b040" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96aa3e06-5246-e3e4-76e9-2ac280db708d" executionId="eb017341-10b1-4ffa-bd61-1cd32b5d8dce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5755dc5-f9a3-c101-e98a-c4e811bdedd8" executionId="21ec3fa1-4447-47da-8af1-f36cf9538f54" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="12" executed="12" passed="12" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 10.0.11)
+[xUnit.net 00:00:00.10]   Discovering: SQL2CS.Modernized.Tests
+[xUnit.net 00:00:00.15]   Discovered:  SQL2CS.Modernized.Tests
+[xUnit.net 00:00:00.15]   Starting:    SQL2CS.Modernized.Tests
+[xUnit.net 00:00:01.20]   Finished:    SQL2CS.Modernized.Tests
+</StdOut>
+    </Output>
+    <CollectorDataEntries>
+      <Collector agentName="localhost" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+        <UriAttachments>
+          <UriAttachment>
+            <A href="localhost/coverage.cobertura.xml"></A>
+          </UriAttachment>
+        </UriAttachments>
+      </Collector>
+    </CollectorDataEntries>
+  </ResultSummary>
+</TestRun>
